@@ -37,16 +37,19 @@ class App extends Component {
     ]
   }
   
-  render() {
-    let result= this.cityList.map((data)=>{
-      if(data.country==="India"){
-      return <ul key={data.name}>{data.name}</ul>
-      }
+render(){
+    let result= this.cityList.map((data)=>
+    { if(data.country==="India"){
+      return <li key={data.name}> {data.name} </li>
+    }
     })
+
+    console.log(result.isArray)
+
     return (
        <div id="main">
         {/* Do not remove the main div */}
-         <li>{result}</li>
+         <ol>{result}</ol>
       </div>
     )
   }
