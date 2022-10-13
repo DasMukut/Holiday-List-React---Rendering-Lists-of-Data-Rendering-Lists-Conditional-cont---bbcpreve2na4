@@ -44,9 +44,7 @@ render(){
     }
     })
 
-    console.log(result.isArray)
-
-    return (
+     return (
        <div id="main">
         {/* Do not remove the main div */}
          <ol>{result}</ol>
