@@ -37,10 +37,6 @@ class App extends Component {
     ]
   }
   
-  const result= this.cityList.map((data)=>{
-       return <ol>{data.name}</ol>
-  })
-
   render() {
     let result= this.cityList.map((data)=>{
       if(data.country==="India"){
