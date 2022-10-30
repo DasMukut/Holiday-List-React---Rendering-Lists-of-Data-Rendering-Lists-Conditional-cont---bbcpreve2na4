@@ -38,16 +38,10 @@
 //   }
   
 // render(){
-//     let result= this.cityList.map((data)=>
-//     { if(data.country==="India"){
-//       return <li key={data.name}> {data.name} </li>
-//     }
-//     })
-
-//      return (
+//    return (
 //        <div id="main">
 //         {/* Do not remove the main div */}
-//          <ol>{result}</ol>
+//        
 //       </div>
 //     )
 //   }
@@ -110,11 +104,15 @@ class App extends Component {
   }
   
 render(){
-    let result= this.cityList.map((data)=>
-    { if(data.country==="India"){
-      return <li key={data.name}> {data.name} </li>
-    }
-    })
+    let i=1;
+  let result= this.cityList.map((data)=>
+  { if(data.country==="India"){
+    const key="location"+i;
+    i=i+1;
+    return (<li key={key}> {data.name} </li>) 
+    
+  }
+  })
 
      return (
        <div id="main">
@@ -125,18 +123,6 @@ render(){
   }
 }
 
-
-
-
-//   render() {
-//     return (
-//       <div id="main">
-//         {/* Do not remove the main div */}
-//          <li key={this.cityList.name}>{result}</li>
-//       </div>
-//     )
-//   }
-// }
 
 
 export default App;
